@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width">
+	<style type="text/css">
+		main{
+	margin-left:6%;
+	width: 100%;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	grid-template-columns: 30% 30% 30%;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"title title title"
+	"one two three"
+	"one two three"
+}
+#title{
+	grid-area: title;
+}
+#one{
+	grid-area: one;
+}
+#two{
+	grid-area: two;
+}
+#three{
+	grid-area: three;
+}
+
+@media only screen and (max-width: 700px){
+main{
+		margin-left:10%;
+		width: 90%;
+		display: grid;
+		align-items: center;
+		text-align: center;
+		grid-template-columns: 45% 45%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"title title"
+		"one one"
+		"two two"
+		"three three"
+	}
+	#title{
+		grid-area: title;
+	}
+	#one{
+		grid-area: one;
+	}
+	#two{
+		grid-area: two;
+	}
+	#three{
+		grid-area: three;
+		margin-bottom: 20px;
+	}
+	.main{
+		margin-top: 3vh;
+		border: 1px solid #fff;
+		transition:  0.7s ease;
+		padding: 2vh 2vh;
+	}
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<img src="logo-white.png" class="logo">
+			<nav>
+				<ul id="menuList">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="create_e-card.html">Create E-Card</a></li>
+					<li id="active"><a href="aboutus.html">About Us</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<img src="menu.png" class="menu-icon" onclick="togglemenu()">
+		</div>
+
+		<main>
+			<div id="title">
+				<h1>About Us!</h1>
+				<h5>"e-invitation card"</h5>
+			</div>
+					<a id="one">
+						<div class="main">
+							<h1>Hamizan</h1>
+							<img src="logo-black.png">
+							<h5>A proud student of Politeknik Brunei </h5>
+							<h5>School of Information and Communication Technology</h5>
+							<h5>Name: </h5>
+							<h5>Student ID: </h5>
+							<h5>Course: DISS06</h5>
+							<h5>Intake: 10</h5>
+							<h5>Bwep Assignment Group: </h5>
+							<h5>Favourite Quote: </h5><br>
+							<h4>Creator Of This "e-invitation card" Website</h4>
+						</div>
+					</a>
+
+					<a id="two">
+						<div class="main">
+							<h1>Faiz</h1>
+							<img src="logo-black.png">
+							<h5>A proud student of Politeknik Brunei </h5>
+							<h5>School of Information and Communication Technology</h5>
+							<h5>Name: </h5>							
+							<h5>Student ID: </h5>
+							<h5>Course: DISS06</h5>
+							<h5>Intake: 10</h5>							
+							<h5>Bwep Assignment Group: </h5>
+							<h5>Favourite Quote: </h5><br>
+							<h4>Creator Of This "e-invitation card" Website</h4>
+						</div>
+					</a>
+
+					<a id="three">
+						<div class="main">			
+							<h1>Wa'ie</h1>
+							<img src="logo-black.png">
+							<h5>A proud student of Politeknik Brunei </h5>
+							<h5>School of Information and Communication Technology</h5>
+							<h5>Name: </h5>
+							<h5>Student ID: </h5>
+							<h5>Course: DISS06</h5>
+							<h5>Intake: 10</h5>			
+							<h5>Bwep Assignment Group: </h5>
+							<h5>Favourite Quote: </h5><br>
+							<h4>Creator Of This "e-invitation card" Website</h4>
+						</div>
+					</a>
+		</main>
+	</div>
+
+	<script type="text/javascript">
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px"){
+				menuList.style.maxHeight = "130px";
+			}
+			else{
+				menuList.style.maxHeight = "0px";
+			}
+		}
+
+	</script>
+	
+</body>
+</html>

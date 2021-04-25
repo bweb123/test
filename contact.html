@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width">
+	<style type="text/css">
+		main{
+	margin-left:6%;
+	width: 100%;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	grid-template-columns: 25% 65%;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"title title"
+	"one two"
+	"one two"
+}
+#title{
+	grid-area: title;
+}
+#one{
+	grid-area: one;
+}
+#two{
+	grid-area: two;
+}
+		#one img{
+			width: 100%;
+			float: left;
+		}
+		#two form{
+			width: 70%;
+			float:right;
+			justify-content: center;
+		}
+		label{
+			font-weight: bold;
+		}
+		input[type=text], select, textarea{
+  		width: 100%;
+  		padding: 10px;
+ 		border: 1px solid #ccc;
+  		margin-top: 10px;
+  		margin-bottom: 20px;
+  		resize: vertical;
+		}
+		input[type=submit]{
+			text-decoration: none;
+			color: #000;
+			width: 80px;
+			height: 30px;
+			border: 1px solid #000;
+			transition:  0.6s ease;
+		}
+		input[type=submit]:hover{
+			background-color: #000;
+			color: #fff;
+			border: 1px solid #fff;
+		}
+
+@media only screen and (max-width: 700px){
+main{
+		margin-left:10%;
+		width: 90%;
+		display: grid;
+		align-items: center;
+		text-align: center;
+		grid-template-columns: 25% 65%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"title title"
+		"one one"
+		"two two"
+	}
+	#title{
+		grid-area: title;
+	}
+	#one{
+		grid-area: one;
+	}
+	#two{
+		grid-area: two;
+	}
+	.main{
+		margin-top: 3vh;
+		border: 1px solid #fff;
+		transition:  0.7s ease;
+		padding: 2vh 2vh;
+	}
+	#two form{
+			width: 100%;
+			float: right;
+			justify-content: center;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<img src="logo-white.png" class="logo">
+			<nav>
+				<ul id="menuList">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="create_e-card.html">Create E-Card</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li id="active"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<img src="menu.png" class="menu-icon" onclick="togglemenu()">
+		</div>
+
+		<main>
+			<div id="title">
+				<h1>Contact Us</h1>
+				<h5>Swing by for a cup of coffee, or leave us a message:</h5>
+			</div>
+					<div id="one">
+							<img src="logo-black.png">
+					</div>
+
+					<div id="two">
+							<form action="">
+       							<label for="fname">First Name</label>
+        						<input type="text" id="fname" name="firstname" placeholder="Your name..">
+       							<label for="lname">Last Name</label>
+       				 			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        						<label for="subject">Subject</label>
+       				 			<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        						<input type="submit" value="Submit">
+      						</form>
+					</div>
+		</main>
+	</div>
+
+	<script type="text/javascript">
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px"){
+				menuList.style.maxHeight = "130px";
+			}
+			else{
+				menuList.style.maxHeight = "0px";
+			}
+		}
+
+	</script>
+
+</body>
+</html>
